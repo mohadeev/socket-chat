@@ -24,12 +24,12 @@ const Index: React.FC = () => {
   useEffect((): any => {
     // connect to socket server
     console.log(process.env.BASE_URL);
-    const socket = SocketIOClient.connect(
-      "https://socket-chat-inky.vercel.app",
-      {
-        path: "/api/socketio",
-      }
-    );
+    const ULR = window.location.protocol + "//" + window.location.host;
+    console.log(ULR);
+    console.log("http://localhost:3000");
+    const socket = SocketIOClient.connect(`${ULR}`, {
+      path: "/api/socketio",
+    });
     socket.on("connect_error", (err: any) => {
       console.log(`connect_error due to ${err.message}`);
     });
