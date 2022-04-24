@@ -23,9 +23,12 @@ const Index: React.FC = () => {
 
   useEffect((): any => {
     // connect to socket server
-    const socket = SocketIOClient.connect(`${window.location.protocol + window.location.host}`, {
-      path: "/api/socketio",
-    });
+    const socket = SocketIOClient.connect(
+      "http://socket-chat-inky.vercel.app",
+      {
+        path: "/api/socketio",
+      }
+    );
 
     // log socket connection
     socket.on("connect", () => {
@@ -64,7 +67,6 @@ const Index: React.FC = () => {
       if (resp.ok) setMsg("");
     }
 
-    //
     // focus after click
     inputRef?.current?.focus();
   };
