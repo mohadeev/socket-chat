@@ -23,9 +23,13 @@ const Index: React.FC = () => {
 
   useEffect((): any => {
     // connect to socket server
-    const socket = SocketIOClient.connect(process.env.BASE_URL, {
-      path: "/api/socketio",
-    });
+    console.log(process.env.BASE_URL);
+    const socket = SocketIOClient.connect(
+      "https://socket-chat-inky.vercel.app",
+      {
+        path: "/api/socketio",
+      }
+    );
     socket.on("connect_error", (err: any) => {
       console.log(`connect_error due to ${err.message}`);
     });
