@@ -34,3 +34,4 @@ A running server instance is still needed.
 ## Check a DEMO
 
 Check the code and test this example in [Codesandbox](https://codesandbox.io/s/nextjs-socketio-chat-piffv)
+# socket-chat
