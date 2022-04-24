@@ -46,7 +46,7 @@ const Index: React.FC = () => {
     });
 
     // socket disconnet onUnmount if exists
-    if (socket) return () => socket.disconnect();
+    // if (socket) return () => socket.disconnect();
   }, []);
 
   const sendMessage = async () => {
