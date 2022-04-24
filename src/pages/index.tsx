@@ -23,7 +23,7 @@ const Index: React.FC = () => {
 
   useEffect((): any => {
     // connect to socket server
-    const socket = SocketIOClient.connect(process.env.BASE_URL, {
+    const socket = SocketIOClient.connect(`${window.location.protocol + window.location.host}`, {
       path: "/api/socketio",
     });
 
