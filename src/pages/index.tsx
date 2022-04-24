@@ -64,6 +64,7 @@ const Index: React.FC = () => {
       if (resp.ok) setMsg("");
     }
 
+    //
     // focus after click
     inputRef?.current?.focus();
   };
