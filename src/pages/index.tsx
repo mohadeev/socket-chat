@@ -24,7 +24,7 @@ const Index: React.FC = () => {
   useEffect((): any => {
     // connect to socket server
     const socket = SocketIOClient.connect(
-      "http://socket-chat-inky.vercel.app",
+      "https://socket-chat-inky.vercel.app",
       {
         path: "/api/socketio",
       }
