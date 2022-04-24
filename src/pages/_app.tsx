@@ -4,7 +4,7 @@ import GlobalStyles from "src/components/GlobalStyles";
 import { NextPage } from "next";
 import { AppProps } from "next/dist/next-server/lib/router/router";
 
-const App = ({ Component, pageProps }) => {
+const App: NextPage<AppProps> = ({ Component, pageProps }) => {
   return (
     <>
       <GlobalStyles />
@@ -13,7 +13,4 @@ const App = ({ Component, pageProps }) => {
   );
 };
 
-
 export default App;
-
-//
